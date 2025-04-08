@@ -27,7 +27,7 @@ class PromocionalController extends Controller
             'descripcion' => 'required|string',
             'categoria' => 'required|in:Agendas Zegno,Antiestres,Artículos de Viaje,Bar,Bebidas,Belleza,Bolsas,Complementos,Deportes,Entretenimiento,Escritura,Herramientas,Hieleras Loncheras y Portaviandas,Hogar,Libretas y Carpetas,Llaveros,Maletas,Mochilas,Niños,Oficina,Paraguas e Impermeables,Portafolios,Salud,Tecnología,Textiles',
             'tipo' => 'required|string|max:255',
-            'fotos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5120',
+            'fotos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:20480',
         ]);
 
         $promocional = Promocional::create($validatedData);
@@ -55,7 +55,7 @@ class PromocionalController extends Controller
             'descripcion' => 'sometimes|string',
             'categoria' => 'sometimes|in:Agendas Zegno,Antiestres,Artículos de Viaje,Bar,Bebidas,Belleza,Bolsas,Complementos,Deportes,Entretenimiento,Escritura,Herramientas,Hieleras Loncheras y Portaviandas,Hogar,Libretas y Carpetas,Llaveros,Maletas,Mochilas,Niños,Oficina,Paraguas e Impermeables,Portafolios,Salud,Tecnología,Textiles',
             'tipo' => 'sometimes|string|max:255',
-            'fotos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5120',
+            'fotos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:20480',
         ]);
 
         $promocional = Promocional::findOrFail($id);
